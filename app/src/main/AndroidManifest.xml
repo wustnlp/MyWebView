@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="wust.com.mywebview">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".arouter.SchemeFilterActivity">
+
+            <!-- Schame -->
+            <intent-filter>
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="arouter" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- App Links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="http" />
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WebViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".arouter.TestWebview"></activity>
+        <activity android:name=".arouter.testactivity.Test1Activity"></activity>
+        <activity android:name=".arouter.testactivity.Test2Activity"></activity>
+        <activity android:name=".arouter.testactivity.Test3Activity"></activity>
+        <activity android:name=".arouter.testactivity.Test4Activity"></activity>
+        <activity android:name=".arouter.Main2Activity"></activity>
+        <activity android:name=".jsbridge2.Bridge2Activity"></activity>
+        <activity android:name=".jsbridge.BridgeActivity"></activity>
+        <activity android:name=".jsbridgelib.SampleActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+    </application>
+
+</manifest>

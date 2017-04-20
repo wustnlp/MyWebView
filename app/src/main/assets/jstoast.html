@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script type="text/javascript">
+        function showToast(toast) {
+            //javascript:alias.showToast(toast);
+            window.alias.showToast(toast);
+        }
+        function log(msg){
+            var nv = document.getElementById("pid");
+            nv.innerHTML=msg;
+            console.log(msg);
+        }
+
+    </script>
+
+</head>
+
+<body>
+<input type="button" value="toast" id="aIn"
+       onClick="showToast('我是从H5页面过来的')"/>
+
+<p id="pid">Hello</p>
+</body>
+</html>
